@@ -1,0 +1,5 @@
+#User properties for miniGui 
+#Mon Apr 22 23:08:57 CEST 2013
+Resource3=Data$2$/Users/nmessai/Documents/EclipseWorkspace/Lattice_RCA/data/arretes_decrets_RCF.rcf.xml$2$arretes_decrets_RCF.rcf.xml
+Resource2=Data$15$/Users/nmessai/Documents/EclipseWorkspace/Lattice_RCA/data/arretes_decrets_RLF.rlf.xml$2$arretes_decrets_RLF.rlf.xml
+lastVisitedDirectory=/Users/nmessai/Documents/EclipseWorkspace/Lattice_RCA/data

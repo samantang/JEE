@@ -1,0 +1,40 @@
+<Galicia_Algorithms>
+	<algorithm OnlyExternal="NO" kind="3">
+		<nameID>Ceres</nameID>
+		<desc>GSH builder</desc>
+		<class>galicia.algorithms.gsh.Ceres</class>
+		<externalProcessPrefix>GSH_ceres++ </externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Ceres, returned GSH</description>
+				<dataType>GSH_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="3">
+		<nameID>Pluton</nameID>
+		<desc>GSH builder</desc>
+		<class>galicia.algorithms.gsh.Pluton</class>
+		<externalProcessPrefix>GSH_pluton++ </externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Pluton, returned GSH</description>
+				<dataType>GSH_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+</Galicia_Algorithms>

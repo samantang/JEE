@@ -1,0 +1,59 @@
+<Galicia_Document>
+<RCF>
+<Name> DefaultName </Name>
+
+<BinaryContext numberObj="4" numberAtt="5">
+<Name> arretes </Name>
+<Object>AP</Object>
+<Object>AB</Object>
+<Object>AY</Object>
+<Object>AS</Object>
+<Attribute>bag</Attribute>
+<Attribute>ns</Attribute>
+<Attribute>pa</Attribute>
+<Attribute>son</Attribute>
+<Attribute>nvs</Attribute>
+<BinRel idxO="0" idxA="0"></BinRel>
+<BinRel idxO="0" idxA="2"></BinRel>
+<BinRel idxO="1" idxA="0"></BinRel>
+<BinRel idxO="1" idxA="1"></BinRel>
+<BinRel idxO="1" idxA="3"></BinRel>
+<BinRel idxO="2" idxA="0"></BinRel>
+<BinRel idxO="2" idxA="1"></BinRel>
+<BinRel idxO="2" idxA="4"></BinRel>
+<BinRel idxO="3" idxA="2"></BinRel>
+<BinRel idxO="3" idxA="4"></BinRel>
+</BinaryContext>
+
+<BinaryContext numberObj="4" numberAtt="4">
+<Name> decrets </Name>
+<Object>D95</Object>
+<Object>CPen</Object>
+<Object>O45</Object>
+<Object>L92</Object>
+<Attribute>lcb</Attribute>
+<Attribute>tv</Attribute>
+<Attribute>ab</Attribute>
+<Attribute>ip</Attribute>
+<BinRel idxO="0" idxA="0"></BinRel>
+<BinRel idxO="0" idxA="2"></BinRel>
+<BinRel idxO="1" idxA="1"></BinRel>
+<BinRel idxO="1" idxA="3"></BinRel>
+<BinRel idxO="2" idxA="1"></BinRel>
+<BinRel idxO="2" idxA="2"></BinRel>
+<BinRel idxO="3" idxA="0"></BinRel>
+<BinRel idxO="3" idxA="3"></BinRel>
+</BinaryContext>
+
+<InterContextObjectRelation>
+<Name> ref </Name>
+<SourceNameId> arretes </SourceNameId>
+<DestinationNameId> decrets </DestinationNameId>
+<ObjectRelation idxOSource="0" idxODestination="0"></ObjectRelation>
+<ObjectRelation idxOSource="1" idxODestination="3"></ObjectRelation>
+<ObjectRelation idxOSource="2" idxODestination="1"></ObjectRelation>
+<ObjectRelation idxOSource="3" idxODestination="2"></ObjectRelation>
+</InterContextObjectRelation>
+
+</RCF>
+</Galicia_Document>

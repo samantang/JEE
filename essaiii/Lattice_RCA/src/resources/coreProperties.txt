@@ -1,0 +1,6 @@
+xmlKnownAlgoFilePath = resources/Galicia_Algorithms.xml
+errLogFilePath = resources/galiciaErrLog.txt
+perfStatFilePath = resources/perfs_stat.xml
+maxResourcesId = 500
+maxSessionId = 500
+ExternalTaskFileNameDelimiteur = \"

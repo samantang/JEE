@@ -1,0 +1,3 @@
+#User properties for miniGui 
+#Fri Dec 23 13:23:48 GMT 2011
+lastVisitedDirectory=/users/mimouni/Data/Galicia3

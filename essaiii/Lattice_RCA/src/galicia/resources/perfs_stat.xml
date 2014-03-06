@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PERFS>
+<ALGO_KIND type="GSH_BUILDER">
+<algo name="Ceres">
+<data complexity="25.725048893822713" time="0.14"/>
+<data complexity="21.637467504308354" time="0.094"/>
+<data complexity="35.281214548255" time="0.141"/>
+<data complexity="110.08496054520266" time="2.156"/>
+<data complexity="430.27063133021016" time="71.172"/>
+<data complexity="5.656854249492381" time="0.218"/>
+<data complexity="3.822703392167616" time="0.031"/>
+<data complexity="4.160062793874582" time="0.0"/>
+</algo>
+<algo name="Pluton">
+<data complexity="25.725048893822713" time="0.156"/>
+<data complexity="21.637467504308354" time="0.109"/>
+<data complexity="35.281214548255" time="0.219"/>
+<data complexity="110.08496054520266" time="7.625"/>
+<data complexity="430.27063133021016" time="418.313"/>
+</algo>
+<algo name="Ares">
+<data complexity="110.08496054520266" time="5.796"/>
+<data complexity="5.656854249492381" time="0.031"/>
+<data complexity="25.725048893822713" time="0.141"/>
+<data complexity="430.27063133021016" time="78.719"/>
+</algo>
+</ALGO_KIND>
+<ALGO_KIND type="LATTICE_BUILDER">
+<algo name="MagaliceA_Lat">
+<data complexity="21.637467504308354" time="0.796"/>
+<data complexity="5.366563145999495" time="0.031"/>
+<data complexity="25.725048893822713" time="0.796"/>
+<data complexity="110.08496054520266" time="19.172"/>
+<data complexity="3.7696153649941526" time="0.032"/>
+<data complexity="6.78731169167882" time="0.094"/>
+</algo>
+<algo name="MagaliceO_Lat">
+<data complexity="25.725048893822713" time="2.094"/>
+<data complexity="21.637467504308354" time="0.39"/>
+<data complexity="110.08496054520266" time="204.5"/>
+<data complexity="231.40397065899242" time="0.922"/>
+</algo>
+</ALGO_KIND>
+<ALGO_KIND type="ICEBERG_BUILDER_0.4_With_MinGenerator">
+<algo name="MagaliceA_Lat">
+<data complexity="35.281214548255" time="0.0"/>
+<data complexity="430.27063133021016" time="6.0"/>
+<data complexity="110.08496054520266" time="2.0"/>
+</algo>
+</ALGO_KIND>
+<ALGO_KIND type="ICEBERG_BUILDER_0.4">
+<algo name="MagaliceA_Lat">
+<data complexity="430.27063133021016" time="6.0"/>
+</algo>
+</ALGO_KIND>
+<ALGO_KIND type="LATTICE_BUILDER_With_MinGenerator">
+<algo name="MagaliceA_Lat">
+<data complexity="25.725048893822713" time="2.109"/>
+</algo>
+</ALGO_KIND>
+<ALGO_KIND type="ICEBERG_BUILDER_0.1">
+<algo name="MagaliceA_Lat">
+<data complexity="12.410177275123832" time="0.0"/>
+<data complexity="2.592724864350674" time="0.0"/>
+</algo>
+</ALGO_KIND>
+<ALGO_KIND type="ICEBERG_BUILDER_0.1_With_MinGenerator">
+<algo name="MagaliceA_Lat">
+<data complexity="13.304604466123749" time="0.0"/>
+</algo>
+</ALGO_KIND>
+</PERFS>

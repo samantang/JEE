@@ -1,0 +1,581 @@
+<Galicia_Algorithms>
+	<algorithm OnlyExternal="NO" kind="0">
+		<nameID>ScalingMultiVC</nameID>
+		<desc>Multi-Valued Context Scaling</desc>
+		<class>galicia.algorithms.MultiValCtxScaling</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.MultiValCtxScaling</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Multi-Valued Context</description>
+				<dataType>MULTIVAL_CTX_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>The resulting Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="0">
+		<nameID>ScalingManyVC</nameID>
+		<desc>Multi-Valued Context Scaling</desc>
+		<class>galicia.algorithms.ManyValCtxScaling</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ManyValCtxScaling</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Multi-Valued Context</description>
+				<dataType>MANYVAL_CTX_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>The resulting Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="5">
+			<nameID>MultiFCA</nameID>
+			<desc>>MultiFCA</desc>
+			<class>galicia.algorithms.RCA.multiFCA</class>
+			<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.RCA.multiFCA</externalProcessPrefix>
+			<externalProcessSuffix> </externalProcessSuffix>
+			<input>
+				<resource InOut="NO">
+					<description>The RCF </description>
+					<dataType>RCF_DATA</dataType>
+				</resource>
+				<resource InOut="NO">
+					<description>isWide Scaling ?</description>
+					<dataType>BOOLEAN_DATA</dataType>
+				</resource>
+			</input>
+			<output>
+			<resource>
+				<description>the RLF</description>
+				<dataType>RLF_DATA</dataType>
+			</resource>
+			</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="1">
+		<nameID>MagaliceA_Lat</nameID>
+		<desc>Incremental Lattice builder, incremental kind (Attribute/Extent)</desc>
+		<class>galicia.algorithms.lattice.MagaliceA_Lat</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.lattice.MagaliceA_Lat</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>Compute minimal generators ?</description>
+				<dataType>BOOLEAN_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>MagaliceA_Lat, returned lattice</description>
+				<dataType>LATTICE_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="2">
+		<nameID>MagaliceA_Iceberg</nameID>
+		<desc>Incremental Iceberg builder, incremental kind (Attribute/Extent)</desc>
+		<class>galicia.algorithms.iceberg.MagaliceA_Iceberg</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.iceberg.MagaliceA_Iceberg</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>Compute minimal generators ?</description>
+				<dataType>BOOLEAN_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>MagaliceA_Iceberg, returned iceberg</description>
+				<dataType>ICEBERG_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="2">
+		<nameID>CHARM-L</nameID>
+		<desc>Iceberg builder</desc>
+		<class>galicia.algorithms.iceberg.CHARM_L</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.iceberg.CHARM_L</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>CHARM-L, returned iceberg</description>
+				<dataType>ICEBERG_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="1">
+			<nameID>mergeA_Lat</nameID>
+			<desc>lattice merge</desc>
+			<class>galicia.algorithms.lattice.MergeA_Lat</class>
+			<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.lattice.MergeA_Lat</externalProcessPrefix>
+			<externalProcessSuffix> </externalProcessSuffix>
+			<input>
+				<resource InOut="NO">
+					<description>The First lattice </description>
+					<dataType>LATTICE_DATA</dataType>
+				</resource>
+				<resource InOut="NO">
+					<description>The Second lattice </description>
+					<dataType>LATTICE_DATA</dataType>
+				</resource>
+			</input>
+			<output>
+			<resource>
+				<description>MergeA_Lat, returned lattice</description>
+				<dataType>LATTICE_DATA</dataType>
+			</resource>
+			</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="1">
+		<nameID>MagaliceO_Lat</nameID>
+		<desc>Incremental Lattice builder, incremental kind (Object/Intent)</desc>
+		<class>galicia.algorithms.lattice.MagaliceO_Lat</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.lattice.MagaliceO_Lat</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>Compute minimal generators ?</description>
+				<dataType>BOOLEAN_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>MagaliceO_Lat, returned lattice</description>
+				<dataType>LATTICE_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="1">
+			<nameID>mergeO_Lat</nameID>
+			<desc>lattice merge</desc>
+			<class>galicia.algorithms.lattice.MergeO_Lat</class>
+			<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.lattice.MergeO_Lat</externalProcessPrefix>
+			<externalProcessSuffix> </externalProcessSuffix>
+			<input>
+				<resource InOut="NO">
+					<description>The First lattice </description>
+					<dataType>LATTICE_DATA</dataType>
+				</resource>
+				<resource InOut="NO">
+					<description>The Second lattice </description>
+					<dataType>LATTICE_DATA</dataType>
+				</resource>
+				<resource InOut="NO">
+					<description>Compute minimal generators ? </description>
+					<dataType>BOOLEAN_DATA</dataType>
+				</resource>
+			</input>
+			<output>
+			<resource>
+				<description>MergeO_Lat, returned lattice</description>
+				<dataType>LATTICE_DATA</dataType>
+			</resource>
+			</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="3">
+		<nameID>Ares</nameID>
+		<desc>GSH builder</desc>
+		<class>galicia.algorithms.gsh.Ares</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.gsh.Ares</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Ares, returned GSH</description>
+				<dataType>GSH_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="3">
+		<nameID>Ceres</nameID>
+		<desc>GSH builder</desc>
+		<class>galicia.algorithms.gsh.Ceres</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.gsh.Ceres</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Ceres, returned GSH</description>
+				<dataType>GSH_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="3">
+		<nameID>Pluton</nameID>
+		<desc>GSH builder</desc>
+		<class>galicia.algorithms.gsh.Pluton</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.gsh.Pluton</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Binary Context</description>
+				<dataType>BINARY_CTX_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Pluton, returned GSH</description>
+				<dataType>GSH_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="3">
+		<nameID>GSHComparator</nameID>
+		<desc>verify two GSH are equivalent</desc>
+		<class>galicia.algorithms.gsh.GSHComparator</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.gsh.GSHComparator</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The first GSH</description>
+				<dataType>GSH_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The second GSH</description>
+				<dataType>GSH_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>GSH Intersection</description>
+				<dataType>GSH_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="1">
+		<nameID>Jen_Lat</nameID>
+		<desc>Minimun generator computation on lattice</desc>
+		<class>galicia.algorithms.generator.Jen_Lat</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.generator.Jen_Lat</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="YES">
+				<description>The lattice to update</description>
+				<dataType>LATTICE_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="2">
+		<nameID>Jen_Iceberg</nameID>
+		<desc>Minimun generator computation on iceberg</desc>
+		<class>galicia.algorithms.generator.Jen_Iceberg</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.generator.Jen_Iceberg</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="YES">
+				<description>The iceberg to update</description>
+				<dataType>ICEBERG_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="4">
+		<nameID>BaseGenericGenerator_Lat</nameID>
+		<desc>Pasquier Generic Rule Basis Generator for Lattice</desc>
+		<class>galicia.algorithms.ruleBasis.BaseGenericGenerator_Lat</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.BaseGenericGenerator_Lat</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The lattice to extract rules</description>
+				<dataType>LATTICE_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Generic Base</description>
+				<dataType>RULE_BASIS_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="4">
+		<nameID>BaseGenericGenerator_Iceberg</nameID>
+		<desc>Pasquier Generic Rule Basis Generator for Iceberg</desc>
+		<class>galicia.algorithms.ruleBasis.BaseGenericGenerator_Iceberg</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.BaseGenericGenerator_Iceberg</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The iceberg to extract rules</description>
+				<dataType>ICEBERG_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Generic Base</description>
+				<dataType>RULE_BASIS_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="4">
+		<nameID>RTBaseInformativeGenerator_Lat</nameID>
+		<desc>Pasquier RT Informative Rule Basis Generator for Lattice</desc>
+		<class>galicia.algorithms.ruleBasis.RTBaseInformativeGenerator_Lat</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.RTBaseInformativeGenerator_Lat</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The lattice to extract rules</description>
+				<dataType>LATTICE_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal confidence [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>RT Informative Base</description>
+				<dataType>RULE_BASIS_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="4">
+		<nameID>RTBaseInformativeGenerator_Iceberg</nameID>
+		<desc>Pasquier RT Informative Rule Basis Generator for Iceberg</desc>
+		<class>galicia.algorithms.ruleBasis.RTBaseInformativeGenerator_Iceberg</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.RTBaseInformativeGenerator_Iceberg</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Iceberg to extract rules</description>
+				<dataType>ICEBERG_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal confidence [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>RT Informative Base</description>
+				<dataType>RULE_BASIS_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="4">
+		<nameID>BaseInformativeGenerator_Lat</nameID>
+		<desc>Pasquier Informative Rule Basis Generator for Lattice</desc>
+		<class>galicia.algorithms.ruleBasis.BaseInformativeGenerator_Lat</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.BaseInformativeGenerator_Lat</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The lattice to extract rules</description>
+				<dataType>LATTICE_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal confidence [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Informative Base</description>
+				<dataType>RULE_BASIS_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="4">
+		<nameID>BaseInformativeGenerator_Iceberg</nameID>
+		<desc>Pasquier Informative Rule Basis Generator for Iceberg</desc>
+		<class>galicia.algorithms.ruleBasis.BaseInformativeGenerator_Iceberg</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.BaseInformativeGenerator_Iceberg</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Iceberg to extract rules</description>
+				<dataType>ICEBERG_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal confidence [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Informative Base</description>
+				<dataType>RULE_BASIS_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="4">
+		<nameID>BaseRepresentativeGenerator_Lat</nameID>
+		<desc>Representative Rule Basis Generator for Lattice</desc>
+		<class>galicia.algorithms.ruleBasis.BaseRepresentativeGenerator_Lat</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.BaseRepresentativeGenerator_Lat</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The lattice to extract rules</description>
+				<dataType>LATTICE_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal confidence [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Representative Base</description>
+				<dataType>RULE_BASIS_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="4">
+		<nameID>BaseRepresentativeGenerator_Iceberg</nameID>
+		<desc>Representative Rule Basis Generator for Iceberg</desc>
+		<class>galicia.algorithms.ruleBasis.BaseRepresentativeGenerator_Iceberg</class>
+		<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.BaseRepresentativeGenerator_Iceberg</externalProcessPrefix>
+		<externalProcessSuffix> </externalProcessSuffix>
+		<input>
+			<resource InOut="NO">
+				<description>The Iceberg to extract rules</description>
+				<dataType>ICEBERG_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal support [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+			<resource InOut="NO">
+				<description>The minimal confidence [0;1]</description>
+				<dataType>FLOAT_DATA</dataType>
+			</resource>
+		</input>
+		<output>
+			<resource>
+				<description>Representative Base</description>
+				<dataType>RULE_BASIS_DATA</dataType>
+			</resource>
+		</output>
+	</algorithm>
+	<algorithm OnlyExternal="NO" kind="4">
+			<nameID>IGBGenerator_Lat</nameID>
+			<desc>IGB Rule Basis Generator for Lattice</desc>
+			<class>galicia.algorithms.ruleBasis.IGBGenerator_Lat</class>
+			<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.IGBGenerator_Lat</externalProcessPrefix>
+			<externalProcessSuffix> </externalProcessSuffix>
+			<input>
+				<resource InOut="NO">
+					<description>The lattice to extract rules</description>
+					<dataType>LATTICE_DATA</dataType>
+				</resource>
+				<resource InOut="NO">
+					<description>The minimal support [0;1]</description>
+					<dataType>FLOAT_DATA</dataType>
+				</resource>
+				<resource InOut="NO">
+					<description>The minimal confidence [0;1]</description>
+					<dataType>FLOAT_DATA</dataType>
+				</resource>
+			</input>
+			<output>
+				<resource>
+					<description>IGB Base</description>
+					<dataType>RULE_BASIS_DATA</dataType>
+				</resource>
+			</output>
+		</algorithm>
+		<algorithm OnlyExternal="NO" kind="4">
+			<nameID>IGBGenerator_Iceberg</nameID>
+			<desc>Representative Rule Basis Generator for Iceberg</desc>
+			<class>galicia.algorithms.ruleBasis.IGBGenerator_Iceberg</class>
+			<externalProcessPrefix>java -Xmx1024m -cp galicia3.jar galicia.algorithms.ruleBasis.IGBGenerator_Iceberg</externalProcessPrefix>
+			<externalProcessSuffix> </externalProcessSuffix>
+			<input>
+				<resource InOut="NO">
+					<description>The Iceberg to extract rules</description>
+					<dataType>ICEBERG_DATA</dataType>
+				</resource>
+				<resource InOut="NO">
+					<description>The minimal support [0;1]</description>
+					<dataType>FLOAT_DATA</dataType>
+				</resource>
+				<resource InOut="NO">
+					<description>The minimal confidence [0;1]</description>
+					<dataType>FLOAT_DATA</dataType>
+				</resource>
+			</input>
+			<output>
+				<resource>
+					<description>IGB Base</description>
+					<dataType>RULE_BASIS_DATA</dataType>
+				</resource>
+			</output>
+	</algorithm>
+</Galicia_Algorithms>

@@ -1,0 +1,43 @@
+
+table
+{
+    border-collapse: collapse;
+}
+td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 2px solid black;
+}
+.infos {
+    font-style: italic;
+    color: #E8A22B;
+}
+.titre{
+	 color: #0568CD;
+}
+.context{
+	color: blue;
+	font-size: 30px;
+	text-align: center;
+}
+.retour{
+	color: green;
+	font-size: 20px;
+	text-align: center;
+}
+#c1c2, #cr, #context1et2
+{
+    display: inline-block;
+  /*  border: 1px solid blue;	*/
+    margin: 15px;
+    padding: 10px;
+    vertical-align: top;
+    
+}
+
+ #c1c2, #context1et2{
+     background-color: #E6E6FA;
+ }
+#cr
+{
+    background-color: #D3D3D3;
+}

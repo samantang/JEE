@@ -1,0 +1,199 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <xsd:element name="Galicia_Document">
+    <xsd:complexType>
+      <xsd:choice>
+        <xsd:element minOccurs="0" maxOccurs="1" name="BinaryContext" type="BinaryContext_Type" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="MultiValuedContext" type="MultiValuedContext_Type" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="RCF" type="RCF_Type" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="RCA_Output" type="RCA_Output_Type" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="Lattice" type="Lattice_Type" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="GSH" type="GSH_Type" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="ICEBERG" type="ICEBERG_Type" />
+      </xsd:choice>
+    </xsd:complexType>
+
+    <xsd:key name="ID_Cpt">
+      <xsd:selector xpath=".//Concept"/>
+      <xsd:field xpath="ID"/>
+    </xsd:key>
+
+    <xsd:key name="ID_Ctx">
+      <xsd:selector xpath=".//BinaryContext | .//InterObjectContext | .//MultiValuedContext"/>
+      <xsd:field xpath="Name"/>
+    </xsd:key>
+
+    <xsd:keyref name="Ref_Ctx_Source" refer="ID_Ctx">
+      <xsd:selector xpath=".//InterObjectContext"/>
+      <xsd:field xpath="Context_Ref_Obj"/>
+    </xsd:keyref>
+
+    <xsd:keyref name="Ref_Ctx_Target" refer="ID_Ctx">
+      <xsd:selector xpath=".//InterObjectContext"/>
+      <xsd:field xpath="Context_Ref_Att"/>
+    </xsd:keyref>
+	
+  </xsd:element>
+
+
+  <xsd:complexType name="ObjectToAttributeRelationship_Type" abstract="true">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="Name" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Object" type="xsd:string"/>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="Attribute" type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="numberObj" type="xsd:nonNegativeInteger" use="required" />
+    <xsd:attribute name="numberAtt" type="xsd:nonNegativeInteger" use="required" />
+  </xsd:complexType>
+
+
+  <xsd:complexType name="BinaryContext_Type">
+    <xsd:complexContent>
+    <xsd:extension base="ObjectToAttributeRelationship_Type">
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="BinRel" type="BinRel_Type"/>
+      </xsd:sequence>
+    </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="BinRel_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="Object_Ref" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="Attribute_Ref" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="InterObjectContext_Type">
+    <xsd:complexContent>
+    <xsd:extension base="BinaryContext_Type">
+      <xsd:sequence>
+        <xsd:element minOccurs="1" maxOccurs="1" name="Context_Ref_Obj" type="xsd:string"/>
+        <xsd:element minOccurs="1" maxOccurs="1" name="Context_Ref_Att" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="MultiValuedContext_Type">
+    <xsd:complexContent>
+    <xsd:extension base="ObjectToAttributeRelationship_Type">
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="MultiValuedRel" type="MultiValuedRel_Type" />
+      </xsd:sequence>
+    </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="MultiValuedRel_Type">
+    <xsd:complexContent>
+    <xsd:extension base="BinRel_Type">
+      <xsd:sequence>
+        <xsd:element minOccurs="1" maxOccurs="1" name="Attribute_Value" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="RCF_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="Name" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="BinaryContext" type="BinaryContext_Type" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="MultiValuedContext" type="MultiValuedContext_Type" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="InterObjectContext" type="InterObjectContext_Type" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="RCA_Output_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Lattice" type="Lattice_Type" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="Lattice_Type">
+    <xsd:complexContent>
+    <xsd:extension base="ObjectToAttributeRelationship_Type">
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="Concept" type="Concept_Type" />
+      </xsd:sequence>
+      <xsd:attribute name="numberCpt" type="xsd:nonNegativeInteger" use="required" />
+    </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="GSH_Type">
+    <xsd:complexContent>
+    <xsd:extension base="ObjectToAttributeRelationship_Type">
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="Concept" type="Concept_Type" />
+      </xsd:sequence>
+      <xsd:attribute name="numberCpt" type="xsd:nonNegativeInteger" use="required" />
+    </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="ICEBERG_Type">
+    <xsd:complexContent>
+    <xsd:extension base="ObjectToAttributeRelationship_Type">
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="Concept" type="Concept_Type" />
+      </xsd:sequence>
+      <xsd:attribute name="numberCpt" type="xsd:nonNegativeInteger" use="required" />
+      <xsd:attribute name="minimalSupport" type="xsd:float" use="required" />
+    </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="Concept_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="ID" type="xsd:nonNegativeInteger" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="Extent" type="Extent_Type" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="Intent" type="Intent_Type" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Itemset_Generator" type="Att_Generator_Type" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="UpperCovers" type="UpperCovers_Type" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="Extent_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Object_Ref" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="Intent_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Attribute_Ref" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Att_Generator_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Attribute_Ref" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="UpperCovers_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Concept_Ref" type="xsd:nonNegativeInteger" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

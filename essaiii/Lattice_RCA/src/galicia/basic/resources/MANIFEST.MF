@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: lib/batik.jar lib/svggen.jar lib/fop.jar lib/jcommon.jar lib/jfreechart.jar
+Main-Class: galicia.Start
+

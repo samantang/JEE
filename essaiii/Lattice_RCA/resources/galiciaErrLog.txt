@@ -1,0 +1,72 @@
+
+
+--------------------------
+Day/Month/Year = 28/8/2005
+H/Min/Sec = 21/31/35
+--------------------------
+Can not get reader for reading result in 'GSHComparator !
+tempFile1909803687.gsh.xml (Le fichier spécifié est introuvable)
+##########################
+
+
+--------------------------
+Day/Month/Year = 10/10/2005
+H/Min/Sec = 13/40/59
+--------------------------
+Can not get reader for reading result in 'ScalingManyVC !
+tempFile1394484631.bin.xml (Le fichier spécifié est introuvable)
+##########################
+
+
+--------------------------
+Day/Month/Year = 10/10/2005
+H/Min/Sec = 13/43/28
+--------------------------
+Can not get reader for reading result in 'ScalingManyVC !
+tempFile-1042709709.bin.xml (Le fichier spécifié est introuvable)
+##########################
+
+
+--------------------------
+Day/Month/Year = 10/10/2005
+H/Min/Sec = 13/43/54
+--------------------------
+Can not get reader for reading result in 'ScalingManyVC !
+tempFile410992824.bin.xml (Le fichier spécifié est introuvable)
+##########################
+
+
+--------------------------
+Day/Month/Year = 10/10/2005
+H/Min/Sec = 13/54/1
+--------------------------
+Can not get reader for reading result in 'ScalingMultiVC !
+tempFile-1630016996.bin.xml (Le fichier spécifié est introuvable)
+##########################
+
+
+--------------------------
+Day/Month/Year = 10/10/2005
+H/Min/Sec = 13/58/20
+--------------------------
+Can not get reader for reading result in 'ScalingMultiVC !
+tempFile-24987853.bin.xml (Le fichier spécifié est introuvable)
+##########################
+
+
+--------------------------
+Day/Month/Year = 10/10/2005
+H/Min/Sec = 14/16/46
+--------------------------
+Can not get reader for reading result in 'ScalingMultiVC !
+tempFile-1153634941.bin.xml (Le fichier spécifié est introuvable)
+##########################
+
+
+--------------------------
+Day/Month/Year = 13/1/2012
+H/Min/Sec = 12/13/56
+--------------------------
+Can not get reader for reading result in 'MultiFCA !
+tempFile2035309219.rlf.xml (No such file or directory)
+##########################
